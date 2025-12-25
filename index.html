@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* ❤️ HEART */
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      margin: auto;
+      animation: beat 1s infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .heart:before {
+      left: 50px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* 🖼 IMAGE */
+    .photo {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .photo img {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* 📝 SCROLLING TEXT */
+    .text-box {
+      width: 220px;
+      overflow: hidden;
+      margin: 15px auto;
+    }
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 8s linear infinite;
+  font-size: 16px;
+  color: #fff;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="heart"></div>
+
+    <div class="photo" id="photo">
+      <img src="mylove.jpg" alt="My Love">
+      <div class="text-box">
+        <div class="scroll-text">
+          ❤️ happy merry Christmas 🎄 bby, You are my favorite person in this world❤️
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("photo").style.display = "block";
+    }, 2500);
+  </script>
+</body>
+</html>
